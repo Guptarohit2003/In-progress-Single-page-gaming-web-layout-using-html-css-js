@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        color: white;
+        cursor: pointer;
+        font-size: 26px;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+      .flex-shrink-0 {
+        flex-shrink: 0;
+      }
+      .flex-grow-1 {
+        flex-grow: 1;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-sbetween {
+        justify-content: space-between;
+      }
+
+      .text-align {
+        text-align-last: center;
+      }
+      .align-center {
+        align-items: center;
+      }
+      ul {
+        list-style: none;
+      }
+
+      li {
+        float: right;
+        padding: 10px 20px;
+        margin: 5px 10px;
+        transition: 1s;
+      }
+
+      li:hover {
+        border-bottom: 2px solid #0057ff;
+        cursor: pointer;
+      }
+
+      .nav-bar-custom {
+        background-color: rgb(23, 23, 23);
+        color: white;
+        padding: 5px 30px;
+      }
+      button {
+        cursor: pointer;
+        border: 0;
+        border-radius: 25px;
+        font-weight: 600px;
+        margin: 0 10px;
+        width: 100px;
+        padding: 10px 0;
+        transition: 4sec;
+      }
+      button:hover {
+        color: white;
+        box-shadow: rgba(104, 85, 224, 1);
+        background-color: rgba(104, 85, 224, 1);
+      }
+      .nav-bar-custom span {
+        color: blue;
+        font-size: 20px;
+      }
+      .sign {
+        color: white;
+        background-color: #0057ff;
+      }
+      .log {
+        background-color: aliceblue;
+        color: #0057ff;
+        border: 2px solid #0057ff;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .dropbtn {
+        color: white;
+        background-color: rgb(23, 23, 23);
+        border: none;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(23, 23, 23);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content :hover {
+        color: #0057ff;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .bg1 {
+        background-color: rgb(23, 23, 23);
+      }
+      .bg2 {
+        background-color: black;
+      }
+      .bg3 {
+        background-color: white;
+      }
+      .bg4 {
+        background-color: antiquewhite;
+      }
+      .bg-image {
+        background-image: url(images/bg-img.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+      .body1 {
+        width: 100vw;
+        font-size: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 50px 0;
+        padding: 30px;
+      }
+      .body2 {
+        font-size: 40px;
+        color: #cfd2d6;
+      }
+      .body3 {
+        margin: 0 200px;
+        padding: 70px 0;
+      }
+      .body3 a {
+        border: none;
+        transition: 2s;
+      }
+      .body3 img {
+        background-size: contain;
+        width: 300px;
+        height: 300px;
+      }
+      .body3 a :hover {
+        border: 3px solid #0057ff;
+        cursor: pointer;
+      }
+
+      .footer1 {
+        padding: 30px;
+      }
+      .footer1 > div {
+        padding: 10px;
+        color: #0057ff;
+        font-size: 30px;
+      }
+      .footer1 div span {
+        font-size: 25px;
+        color: #cacdd2;
+      }
+      .footer1 div span a {
+        padding: 0 5px;
+        color: white;
+      }
+
+      .footer2 {
+        padding: 20px;
+      }
+      .footer2 div a {
+        padding: 0 5px;
+        color: #cfd2d6;
+      }
+      .footer2 div span,
+      .footer2 div span a {
+        color: #0057ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="flex justify-sbetween align-center nav-bar-custom flex-shrink-0"
+    >
+      <div>
+        <a href="index.html">
+          <h1>KING<span>DOME</span></h1>
+        </a>
+      </div>
+      <div>
+        <ul>
+          <a href="#"><li>Boosting</li></a>
+          <a href="file2.html"><li>Events & Tournaments</li></a>
+          <a href="#"><li>Contribute</li></a>
+          <li>
+            <div class="dropdown">
+              <div class="dropbtn">Accounts</div>
+              <div class="dropdown-content">
+                <a href="#">Buy</a>
+                <a href="#">Sell</a>
+                <a href="#">Trade</a>
+                <a href="#">Rent</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-column main flex-grow-1 bg-image">
+      <div class="body1 flex flex-column align-center">
+        <div class="text-align">
+          <span>
+            <b>
+              Learn From The Best<br />
+              For The Best
+            </b>
+          </span>
+        </div>
+      </div>
+      <div class="flex justify-center body2">
+        <div>Select Game For a Coaching</div>
+      </div>
+      <div class="flex justify-sbetween justify-center body3">
+        <a href="#"><img src="images/dota_2.jpg" alt="" /></a>
+        <a href="#"> <img src="images/csgo.jpg" alt="" /></a>
+        <a href="#"> <img src="images/LOL.jpg" alt="" /></a>
+      </div>
+      <div class="flex justify-sbetween justify-center body3">
+        <a href="#"> <img src="images/fortnite.jpg" alt="" /></a>
+        <a href="#"> <img src="images/valo.jpg" alt="" /></a>
+        <a href="#"> <img src="images/overwatch.jpg" alt="" /></a>
+      </div>
+    </div>
+    <div class="flex flex-column flex-shrink-0">
+      <div class="flex flex-column bg1 justify-center align-center footer1">
+        <div>NEWS</div>
+        <div>
+          <span
+            >Contact Us: <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-linkedin-square"></i></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a
+          ></span>
+        </div>
+      </div>
+      <div class="flex justify-sbetween footer2 bg2">
+        <div class="flex">
+          <span
+            >copyright &copy;
+            <a href="#">2023 Bennett, Coleman & Co. Ltd. All rights reserved</a>
+          </span>
+        </div>
+        <div class="flex">
+          <a href="">Privacy Policy</a>
+          <a href="">Terms and Condition</a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
